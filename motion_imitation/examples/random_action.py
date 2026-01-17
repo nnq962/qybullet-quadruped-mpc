@@ -17,9 +17,9 @@ from motion_imitation.robots import robot_config
 
 FLAGS = flags.FLAGS
 flags.DEFINE_enum('robot_type', 'A1', ['A1', 'Laikago'], 'Robot Type.')
-flags.DEFINE_enum('motor_control_mode', 'Torque',
+flags.DEFINE_enum('motor_control_mode', 'Hybrid',
                   ['Torque', 'Position', 'Hybrid'], 'Motor Control Mode.')
-flags.DEFINE_bool('on_rack', False, 'Whether to put the robot on rack.')
+flags.DEFINE_bool('on_rack', True, 'Whether to put the robot on rack.')
 
 ROBOT_CLASS_MAP = {'A1': a1.A1, 'Laikago': laikago.Laikago}
 
